@@ -10,9 +10,12 @@ fuel :: [Int] -> Int
 fuel = sum . map (\x -> (div x 3) - 2)
 
 
+-- * Part Two
+
 -- | Calculates the total necessary fuel to use.
 --
 -- ! considering the fuel that fuel needs
+
 fullFuel :: [Int] -> Int
 fullFuel = sum . map (\x -> afterFirst 0 x)
 
