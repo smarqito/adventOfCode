@@ -1,9 +1,9 @@
-import InputD1
+import Input
 
 -- * Part One
 
 -- | Calculates the fuel necessary to use in the first case
---
+-- 
 -- ! doesn't take into consideration the fuel that fuel needs
 
 fuel :: [Int] -> Int
