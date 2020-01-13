@@ -7,7 +7,7 @@ import Input
 -- ! doesn't take into consideration the fuel that fuel needs
 
 fuel :: [Int] -> Int
-fuel = sum . map (\x -> (div x 3) - 2)
+fuel = foldr (\h t -> (div h 3) - 2 + t) 1
 
 
 -- * Part Two
@@ -17,7 +17,7 @@ fuel = sum . map (\x -> (div x 3) - 2)
 -- ! considering the fuel that fuel needs
 
 fullFuel :: [Int] -> Int
-fullFuel = sum . map (\x -> afterFirst 0 x)
+fullFuel = foldr (\x t -> (afterFirst 0 x) + t) 0
 
 -- | Recursive function to calculate the fuel of each module
 --
